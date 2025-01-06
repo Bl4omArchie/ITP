@@ -1,0 +1,35 @@
+button {
+    margin: 25px;
+    padding: 25px 100px;
+    border-radius: 10px;
+    border: solid;
+    background-color: #E81815;
+    color: white;
+    border-color: black;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    font-size: 60px;
+    color: #FFA500;
+    text-transform: uppercase;
+    transform: skew(-10deg);
+    text-shadow: 
+    -3px -3px 0 #000,  /* Top-left shadow */
+     3px -3px 0 #000,  /* Top-right shadow */
+    -3px  3px 0 #000,  /* Bottom-left shadow */
+     3px  3px 0 #000,  /* Bottom-right shadow */
+     0px -3px 0 #000,  /* Top shadow */
+     0px  3px 0 #000,  /* Bottom shadow */
+    -3px  0px 0 #000,  /* Left shadow */
+     3px  0px 0 #000;  /* Right shadow */
+}
+
+button:hover {
+    background-color: #D2322D;
+}
+
+.button-container {
+    display: flex;
+    gap: 1rem;
+}
