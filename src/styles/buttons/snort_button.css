@@ -1,0 +1,47 @@
+.snortButton {
+    color: #FFA500;
+    background-color: #E81815;
+    border: solid;
+    border-color: black;
+    cursor: pointer;
+    font-size: 60px;
+    font-weight: bold;
+    font-family: 'Arial', sans-serif;
+    padding: 25px 100px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+    transform: skew(-10deg);
+}
+
+.snortButton:hover {
+    background-color: #D2322D;
+} 
+
+.snortButton--small {
+    padding: 15px 50px;
+    font-size: 20px;
+    text-shadow:
+      -2px -2px 0 #000,
+       2px -2px 0 #000,
+      -2px  2px 0 #000,
+       2px  2px 0 #000,
+       0px -2px 0 #000,
+       0px  2px 0 #000,
+      -2px  0px 0 #000,
+       2px  0px 0 #000;
+}
+
+.snortButton--large {
+    padding: 20px 125px;
+    font-size: 60px;
+    text-shadow:
+        -4px -4px 0 #000,
+        4px -4px 0 #000,
+        -4px  4px 0 #000,
+        4px  4px 0 #000,
+        0px -4px 0 #000,
+        0px  4px 0 #000,
+        -4px  0px 0 #000,
+        4px  0px 0 #000;
+}

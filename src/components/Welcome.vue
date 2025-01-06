@@ -1,14 +1,20 @@
 <template>
     <div class="welcome">
-        <img src="../assets/snort_logo.png" alt="Logo" class="floaty-logo" />
-        <h1>Welcome to ITP</h1>
-        <button @click="goToAnotherPage">Install The Pork</button>
+        <div class="logo">
+            <img src="../assets/snort_logo.png" alt="Logo">
+        </div>
+
+        <div class="options">
+            <button class="snortButton snortButton--large" @click="switchToHomepage">Install The Pork</button>
+            <button class="snortButton snortButton--large" @click="switchToHomepage">Stuff #2</button>
+            <button class="snortButton snortButton--large" @click="switchToHomepage">Stuff #3</button>
+        </div>
     </div>
 </template>
   
 <script lang="ts">
     import "../styles/Welcome.css";
-    import "../styles/button_start.css";
+    import "../styles/buttons/snort_button.css";
     import { defineComponent } from 'vue';
     import { useRouter } from 'vue-router';
 
@@ -17,11 +23,11 @@
         setup() {
             const router = useRouter();
 
-            const goToAnotherPage = () => {
+            const switchToHomepage = () => {
                 router.push({ name: 'Menu' });
             };
 
-            return { goToAnotherPage };
+            return { switchToHomepage };
         }
     });
 </script>
