@@ -1,16 +1,21 @@
 <template>
   <div>
       <h1>Homepage</h1>
-      <div id="traffic-graph"></div>
-      
-      <div class="snortBox snortBox--horizontal">
-        <p>My first box</p>
+      <div id="traffic-graph" class="snortBox snortBox--h"> </div>
+
+      <div class="snortBox snortBox--v-l">
+          <p>my second box </p>
       </div>
 
-      <div class="snortBox snortBox--vertical">
-          <p>my second box</p>
+      <div class="snortBox snortBox--v-r">
+          <p>my third box</p>
+      </div>
+
+      <div class="snortBox snortBox--h-r">
+          <p>my fourth box </p>
       </div>
   </div>
+
 </template>
 
 <script lang="ts">

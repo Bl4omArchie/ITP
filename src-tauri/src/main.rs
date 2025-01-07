@@ -1,8 +1,6 @@
-use tauri::{
-    menu::{AboutMetadata, MenuBuilder, MenuItemBuilder, SubmenuBuilder},
-    Manager,
-};
+use tauri::{ menu::{AboutMetadata, MenuBuilder, MenuItemBuilder, SubmenuBuilder},};
 use tauri::Emitter;
+
 
 
 fn main() {
@@ -10,15 +8,18 @@ fn main() {
         .setup(|app| {
             let handle = app.handle();
             
-            // my custom settings menu item
+            // Define custom settings menu item
             let settings = MenuItemBuilder::new("Settings...")
                 .id("settings")
                 .accelerator("CmdOrCtrl+,")
                 .build(app)?;
 
-            // my custom app submenu
+
+            // Define the "App" submenu with title metadata
             let app_submenu = SubmenuBuilder::new(app, "App")
                 .about(Some(AboutMetadata {
+                    name: Some("My App".into()), // Set the app title here
+                    version: Some("1.0.0".into()),
                     ..Default::default()
                 }))
                 .separator()
@@ -31,16 +32,20 @@ fn main() {
                 .quit()
                 .build()?;
 
+            // Build the main menu
             let menu = MenuBuilder::new(app)
                 .items(&[
                     &app_submenu,
                 ])
                 .build()?;
 
+            // Set the application menu
             app.set_menu(menu)?;
+
+            // Handle menu events
             app.on_menu_event(move |app, event| {
                 if event.id() == settings.id() {
-                    // emit a window event to the frontend 
+                    // Emit an event to navigate to the settings page on the frontend
                     let _event = app.emit("custom-event", "/settings");
                 }
             });
