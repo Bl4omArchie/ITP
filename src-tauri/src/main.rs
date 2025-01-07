@@ -1,12 +1,32 @@
 use tauri::{ menu::{AboutMetadata, MenuBuilder, MenuItemBuilder, SubmenuBuilder},};
+use std::net::{IpAddr, Ipv4Addr, UdpSocket};
+use tauri::command;
 use tauri::Emitter;
 
+#[command]
+fn get_network_info() -> Result<String, String> {
+    // Récupérer l'adresse IP locale
+    let hostname = hostname::get().map_err(|e| e.to_string())?;
+    let hostname_str = hostname.to_string_lossy().into_owned();
+    
+    let local_ip = local_ip_address::local_ip().map_err(|e| e.to_string())?;
+    let local_ip_str = match local_ip {
+        IpAddr::V4(ip) => ip.to_string(),
+        IpAddr::V6(_) => "IPv6 non supporté pour l'instant".to_string(),
+    };
+
+    // Retourner les informations en JSON
+    Ok(format!(
+        r#"{{"hostname": "{}", "local_ip": "{}"}}"#,
+        hostname_str, local_ip_str
+    ))
+}
 
 
 fn main() {
     tauri::Builder::default()
         .setup(|app| {
-            let handle = app.handle();
+            let _handle = app.handle();
             
             // Define custom settings menu item
             let settings = MenuItemBuilder::new("Settings...")
@@ -52,6 +72,7 @@ fn main() {
 
             Ok(())
         })
+        .invoke_handler(tauri::generate_handler![get_network_info])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
 }
