@@ -5,7 +5,8 @@
 </template>
 
 <script lang="ts">
-export default {
-  name: 'rules',
-};
+    import "../../styles/Pages.css";
+    export default {
+      name: 'Rules',
+    };
 </script>

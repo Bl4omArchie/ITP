@@ -1,41 +1,55 @@
 <template>
-    <div class="menu">
+    <div class="menu-container">
         <!-- Sidebar -->
-        <div :class="['sidebar', { 'sidebar--active': isSidebarOpen }]">
+        <div class="sidebar">
+            <img src="../assets/snort_logo.png" alt="Logo" width="200px">
             <ul>
-              <img src="../assets/snort_logo.png" alt="Logo" width="200px">
-              <li><button class="snortButton snortButton--small">Homepage</button></li>
-              <li><button class="snortButton snortButton--small">Rules</button></li>
-              <li><button class="snortButton snortButton--small">Modules</button></li>
-              <li><button class="snortButton snortButton--small">Configuration</button></li>
-              <li><button class="snortButton snortButton--small">Tests</button></li>
-              <li><button class="snortButton snortButton--small">Settings</button></li>
+                <li><button @click="loadPage('Home')" class="snortButton snortButton--small">Homepage</button></li>
+                <li><button @click="loadPage('Rules')" class="snortButton snortButton--small">Rules</button></li>
+                <li><button @click="loadPage('Modules')" class="snortButton snortButton--small">Modules</button></li>
+                <li><button @click="loadPage('Instances')" class="snortButton snortButton--small">Instances</button></li>
+                <li><button @click="loadPage('Tests')" class="snortButton snortButton--small">Tests</button></li>
+                <li><button @click="loadPage('Settings')" class="snortButton snortButton--small">Settings</button></li>
             </ul>
         </div>
-        
+
         <div class="content">
-            <button @click="toggleSidebar" class="toggle-button">☰</button>
+            <component :is="currentPage" />
         </div>
+      
     </div>
 </template>
 
   
 <script lang="ts">
+    import Home from './pages/Homepage.vue';
+    import Rules from './pages/Rules.vue';
+    import Modules from './pages/Modules.vue';
+    import Instances from './pages/Instances.vue';
+    import Tests from './pages/Tests.vue';
+    import Settings from './pages/Settings.vue';
     import "../styles/Menu.css";
     import "../styles/buttons/snort_button.css";
-    import "../styles/buttons/menu_toggle.css";
 
     export default {
-      name: 'Menu',
-      data() {
+    name: 'Menu',
+    data() {
         return {
-          isSidebarOpen: false,
+            currentPage: 'Home',
         };
-      },
-      methods: {
-        toggleSidebar() {
-          this.isSidebarOpen = !this.isSidebarOpen;
-        },
-      },
-    };
+    },
+    methods: {
+        loadPage(page: string) {
+            this.currentPage = page.charAt(0).toUpperCase() + page.slice(1);
+        }
+    },
+    components: {
+        Home, // Ensure this matches exactly
+        Rules,
+        Modules,
+        Instances,
+        Tests,
+        Settings,
+    }
+};
 </script>
