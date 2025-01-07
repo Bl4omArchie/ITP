@@ -3,7 +3,7 @@
 </template>
 
 <script lang="ts">
-    import "../../styles/Pages.css";
+    
     export default {
       name: 'Home',
     };
