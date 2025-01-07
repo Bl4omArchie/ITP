@@ -13,7 +13,8 @@
     "windows": [
       {
         "title": "Snort installer",
-        "fullscreen": true
+        "fullscreen": true,
+        "resizable": true
       }
     ],
     "security": {

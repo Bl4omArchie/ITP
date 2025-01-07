@@ -20,7 +20,7 @@
 
 .snortButton--small {
     padding: 15px 50px;
-    font-size: 20px;
+    font-size: 32px;
     text-shadow:
       -2px -2px 0 #000,
        2px -2px 0 #000,
@@ -30,6 +30,23 @@
        0px  2px 0 #000,
       -2px  0px 0 #000,
        2px  0px 0 #000;
+    box-shadow: 5px 5px;
+    display: block; 
+    width: 350px;
+    height: 55px;
+    line-height: 40px;
+    text-align: center;
+    margin: 10px auto;
+    padding: 0;
+    font-size: 20px;
+    box-sizing: border-box;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.snortButton:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .snortButton--large {
