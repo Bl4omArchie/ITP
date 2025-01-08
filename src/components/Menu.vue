@@ -28,6 +28,7 @@
     import Instances from './pages/Instances.vue';
     import Tests from './pages/Tests.vue';
     import Settings from './pages/Settings.vue';
+    
     import "../styles/Menu.css";
     import "../styles/buttons/snort_button.css";
 
@@ -44,7 +45,7 @@
         }
     },
     components: {
-        Home, // Ensure this matches exactly
+        Home,
         Rules,
         Modules,
         Instances,
