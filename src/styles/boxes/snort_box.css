@@ -8,6 +8,7 @@
     max-height: 100%;
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
 }
 
 .snortBox * {
@@ -58,4 +59,29 @@
     width: 49%;
     height: 200px;
     float: right;
+}
+
+.snortBox--store {
+    width: 100px;
+    height: 200px;
+}
+
+.snortBox__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 120px;
+    height: 120px;
+}
+  
+.snortBox__logo-img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
 }

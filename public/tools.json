@@ -1,0 +1,43 @@
+{
+    "snort3": {
+        "git": "https://github.com/snort3/snort3.git",
+        "version": "v3.6.1.0",
+        "package_name": null,
+        "logo_url": "https://assets.stickpng.com/images/62c5bda26aad5aedf80e37fe.png"
+    },
+
+    "libdaq": {
+        "git": "https://github.com/snort3/libdaq.git",
+        "version": "v3.0.17",
+        "package_name": null,
+        "logo_url": null
+    },
+
+    "pulledpork3": {
+        "git": "https://github.com/shirkdog/pulledpork3",
+        "version": "3.0.0.5",
+        "package_name": null,
+        "logo_url": null
+    },
+
+    "hyperscan": {
+        "git": "https://github.com/snort3/snort3.git",
+        "version": "v3.6.1.0",
+        "package_name": null,
+        "logo_url": "https://assets.stickpng.com/images/62c5bda26aad5aedf80e37fe.png"
+    },
+
+    "regex": {
+        "git": "https://github.com/snort3/libdaq.git",
+        "version": "v3.0.17",
+        "package_name": null,
+        "logo_url": null
+    },
+
+    "gperftools": {
+        "git": "https://github.com/shirkdog/pulledpork3",
+        "version": "3.0.0.5",
+        "package_name": null,
+        "logo_url": null
+    }
+}
