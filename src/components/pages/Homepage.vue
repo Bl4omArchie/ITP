@@ -3,15 +3,15 @@
       <h1>Homepage</h1>
       <div id="traffic-graph" class="snortBox snortBox--h"> </div>
 
-      <div class="snortBox snortBox--v-l">
+      <div class="snortBox snortBox--v">
           <p>my second box </p>
       </div>
 
-      <div class="snortBox snortBox--v-r">
+      <div class="snortBox snortBox--v">
           <p>my third box</p>
       </div>
 
-      <div class="snortBox snortBox--h-r">
+      <div class="snortBox snortBox--h">
           <p>my fourth box </p>
       </div>
   </div>

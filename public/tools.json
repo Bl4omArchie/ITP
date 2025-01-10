@@ -39,5 +39,82 @@
         "version": "3.0.0.5",
         "package_name": null,
         "logo_url": null
+    },
+
+    "openSSL": {
+        "git": "https://github.com/snort3/snort3.git",
+        "version": "v3.6.1.0",
+        "package_name": null,
+        "logo_url": "https://assets.stickpng.com/images/62c5bda26aad5aedf80e37fe.png"
+    },
+
+    "libML": {
+        "git": "https://github.com/snort3/libdaq.git",
+        "version": "v3.0.17",
+        "package_name": null,
+        "logo_url": null
+    },
+
+    "sqlmap": {
+        "git": "https://github.com/shirkdog/pulledpork3",
+        "version": "3.0.0.5",
+        "package_name": null,
+        "logo_url": null
+    },
+
+    "snort2": {
+        "git": "https://github.com/snort3/snort3.git",
+        "version": "v3.6.1.0",
+        "package_name": null,
+        "logo_url": "https://assets.stickpng.com/images/62c5bda26aad5aedf80e37fe.png"
+    },
+
+    "DPDK": {
+        "git": "https://github.com/snort3/libdaq.git",
+        "version": "v3.0.17",
+        "package_name": null,
+        "logo_url": null
+    },
+
+    "nmap": {
+        "git": "https://github.com/shirkdog/pulledpork3",
+        "version": "3.0.0.5",
+        "package_name": null,
+        "logo_url": null
+    },
+
+    "ipscan": {
+        "git": "https://github.com/snort3/snort3.git",
+        "version": "v3.6.1.0",
+        "package_name": null,
+        "logo_url": "https://assets.stickpng.com/images/62c5bda26aad5aedf80e37fe.png"
+    },
+
+    "ITP": {
+        "git": "https://github.com/snort3/libdaq.git",
+        "version": "v3.0.17",
+        "package_name": null,
+        "logo_url": null
+    },
+
+    "metasploit": {
+        "git": "https://github.com/shirkdog/pulledpork3",
+        "version": "3.0.0.5",
+        "package_name": null,
+        "logo_url": null
+    },
+
+    "Xsearchbase": {
+        "git": "https://github.com/snort3/snort3.git",
+        "version": "v3.6.1.0",
+        "package_name": null,
+        "logo_url": "https://assets.stickpng.com/images/62c5bda26aad5aedf80e37fe.png"
+    },
+
+    "tensorflow": {
+        "git": "https://github.com/snort3/libdaq.git",
+        "version": "v3.0.17",
+        "package_name": null,
+        "logo_url": null
     }
 }
