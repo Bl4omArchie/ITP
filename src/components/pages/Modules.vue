@@ -1,43 +1,46 @@
 <template>
     <h1>Modules</h1>
-  
-    <input
-      type="text"
-      v-model="searchQuery"
-      placeholder="Search for a module..."
-      class="snortBox__search-bar"
-    />
+    
 
     <button @click="refreshTools" class="snortBox__refresh-btn">Refresh Modules</button>
-  
-    <div class="snortBox snortBox--store">
-        <div v-for="(tool, name) in paginatedTools" :key="name" class="snortBox--store-i">
-            <div class="snortBox__logo">
-                <img :src="tool.logo_url || defaultLogo" :alt="`${name} logo`" class="snortBox__logo-img"/>
+    <br/>
+    <input type="text" v-model="searchQuery" placeholder="Search for a module..." class="search-bar" />
+
+      
+    <div class="snortBox">
+        <h2>Module store</h2>
+        <div class="snorBox snortBox--store">
+            <div v-for="(tool, name) in paginatedTools" :key="name" class="snortBox--store-i">
+                <div class="snortBox__logo">
+                    <img :src="tool.logo_url || defaultLogo" :alt="`${name} logo`" class="snortBox__logo-img"/>
+                </div>
+        
+                <p>{{ name }}</p>
+                <p><a :href="tool.git" target="_blank">Git</a></p>
+                <p>{{ tool.version }}</p>
             </div>
-    
-            <p>{{ name }}</p>
-            <p><a :href="tool.git" target="_blank">Git</a></p>
-            <p>{{ tool.version }}</p>
         </div>
 
-        <div class="snortBox__pagination">
+        <div class="pagination">
             <button @click="prevPage" :disabled="currentPage === 1" class="pagination-btn">
                 <i class="fas fa-chevron-left"></i>
             </button>
 
-            <span>Page {{ currentPage }} of {{ totalPages }}</span>
+            Page {{ currentPage }} of {{ totalPages }}
 
             <button @click="nextPage" :disabled="currentPage === totalPages" class="pagination-btn">
                 <i class="fas fa-chevron-right"></i>
             </button>
         </div>
     </div>
-  </template>
+</template>
   
 
 <script lang="ts">
     import { defineComponent, ref, computed, onMounted } from "vue";
+
+    import "../../styles/boxes/snort_box.css";
+    import "../../styles/boxes/pagination.css";
     
     interface Tool {
         git: string;
@@ -77,7 +80,7 @@
             const query = searchQuery.value.toLowerCase();
             return Object.fromEntries(
                 Object.entries(tools.value).filter(([name]) =>
-                name.toLowerCase().includes(query)
+                    name.toLowerCase().includes(query)
                 )
             );
         });

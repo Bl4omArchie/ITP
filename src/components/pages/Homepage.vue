@@ -21,6 +21,7 @@
 <script lang="ts">
     import { onMounted } from 'vue';
     import * as d3 from 'd3';
+
     import "../../styles/graphics/line_plot.css";
     import "../../styles/boxes/snort_box.css";
 

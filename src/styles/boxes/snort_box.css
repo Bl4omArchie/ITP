@@ -89,11 +89,10 @@
        2px  0px 0 #000;
     box-shadow: 5px 5px;
     display: block;
-    text-align: center;
     color: #FFA500;
     transition: all 0.2s ease;
-    cursor: pointer; 
-    margin-bottom: 20px;
+    cursor: pointer;
+    width: 75%;
 }
 
 .snortBox--store-i:active {
@@ -128,16 +127,6 @@
     display: block;
 }
 
-.snortBox__search-bar {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    color: black;
-}
-
 .snortBox__refresh-btn {
     padding: 10px 20px;
     margin: 10px 0;
@@ -156,36 +145,4 @@
   
 .snortBox__refresh-btn:active {
     transform: scale(0.98);
-}
-
-.snortBox__pagination {
-    display: flex;
-    justify-content: center; /* Centrer les boutons */
-    align-items: center; /* Centrer verticalement */
-    gap: 10px; /* Espace entre les boutons */
-    margin-top: 20px;
-    width: 100%;
-}
-
-
-.pagination-btn {
-    background-color: transparent;
-    border: none;
-    font-size: 24px;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-  
-.pagination-btn:disabled {
-    color: #aaa;
-    cursor: not-allowed;
-}
-  
-.pagination-btn:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-.pagination-btn i {
-    font-size: 24px;
 }

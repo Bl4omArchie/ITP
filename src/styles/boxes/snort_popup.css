@@ -7,9 +7,9 @@
     max-width: 90%;
     animation: scaleUp 0.3s ease-in-out;
     position: relative;
-  }
+}
   
-  .snortPopup-overlay {
+.snortPopup-overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -21,9 +21,9 @@
     align-items: center;
     animation: fadeIn 0.3s ease-out;
     z-index: 1000;
-  }
+}
   
-  .snortPopup-close {
+.snortPopup-close {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -39,35 +39,35 @@
     color: #333;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
-  }
+}
   
-  .snortPopup-close:hover {
+.snortPopup-close:hover {
     background: #e0e0e0;
     color: #000;
-  }
+}
   
-  .snortPopup-content {
+.snortPopup-content {
     text-align: center;
-  }
+}
   
-  .snortPopup * {
+.snortPopup * {
     color: #000;
-  }
+}
   
-  @keyframes fadeIn {
+@keyframes fadeIn {
     from {
       background: rgba(163, 163, 163, 0);
     }
     to {
       background: rgba(163, 163, 163, 0.391);
     }
-  }
+}
   
-  @keyframes scaleUp {
+@keyframes scaleUp {
     from {
       transform: scale(0.9);
     }
     to {
       transform: scale(1);
     }
-  }  
+}  

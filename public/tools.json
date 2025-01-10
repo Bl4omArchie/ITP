@@ -116,5 +116,110 @@
         "version": "v3.0.17",
         "package_name": null,
         "logo_url": null
+    },
+
+    "python3": {
+        "git": "https://github.com/snort3/snort3.git",
+        "version": "v3.6.1.0",
+        "package_name": null,
+        "logo_url": "https://assets.stickpng.com/images/62c5bda26aad5aedf80e37fe.png"
+    },
+
+    "libdaq3": {
+        "git": "https://github.com/snort3/libdaq.git",
+        "version": "v3.0.17",
+        "package_name": null,
+        "logo_url": null
+    },
+
+    "pulledpork4": {
+        "git": "https://github.com/shirkdog/pulledpork3",
+        "version": "3.0.0.5",
+        "package_name": null,
+        "logo_url": null
+    },
+
+    "hypermegascan": {
+        "git": "https://github.com/snort3/snort3.git",
+        "version": "v3.6.1.0",
+        "package_name": null,
+        "logo_url": "https://assets.stickpng.com/images/62c5bda26aad5aedf80e37fe.png"
+    },
+
+    "Pubcrypt": {
+        "git": "https://github.com/snort3/snort3.git",
+        "version": "v3.6.1.0",
+        "package_name": null,
+        "logo_url": "https://assets.stickpng.com/images/62c5bda26aad5aedf80e37fe.png"
+    },
+
+    "John The Ripper": {
+        "git": "https://github.com/snort3/libdaq.git",
+        "version": "v3.0.17",
+        "package_name": null,
+        "logo_url": null
+    },
+
+    "IDA": {
+        "git": "https://github.com/shirkdog/pulledpork3",
+        "version": "3.0.0.5",
+        "package_name": null,
+        "logo_url": null
+    },
+
+    "ghydra": {
+        "git": "https://github.com/snort3/snort3.git",
+        "version": "v3.6.1.0",
+        "package_name": null,
+        "logo_url": "https://assets.stickpng.com/images/62c5bda26aad5aedf80e37fe.png"
+    },
+
+    "hydra": {
+        "git": "https://github.com/snort3/libdaq.git",
+        "version": "v3.0.17",
+        "package_name": null,
+        "logo_url": null
+    },
+
+    "tomcat": {
+        "git": "https://github.com/shirkdog/pulledpork3",
+        "version": "3.0.0.5",
+        "package_name": null,
+        "logo_url": null
+    },
+
+    "markdown": {
+        "git": "https://github.com/snort3/snort3.git",
+        "version": "v3.6.1.0",
+        "package_name": null,
+        "logo_url": "https://assets.stickpng.com/images/62c5bda26aad5aedf80e37fe.png"
+    },
+
+    "latex": {
+        "git": "https://github.com/snort3/libdaq.git",
+        "version": "v3.0.17",
+        "package_name": null,
+        "logo_url": null
+    },
+
+    "burpsuit": {
+        "git": "https://github.com/shirkdog/pulledpork3",
+        "version": "3.0.0.5",
+        "package_name": null,
+        "logo_url": null
+    },
+
+    "snort4": {
+        "git": "https://github.com/snort3/snort3.git",
+        "version": "v3.6.1.0",
+        "package_name": null,
+        "logo_url": "https://assets.stickpng.com/images/62c5bda26aad5aedf80e37fe.png"
+    },
+
+    "nvidia": {
+        "git": "https://github.com/snort3/libdaq.git",
+        "version": "v3.0.17",
+        "package_name": null,
+        "logo_url": null
     }
 }

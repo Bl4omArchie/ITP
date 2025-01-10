@@ -1,6 +1,6 @@
 <template>
     <div>
-      <h1>Informations Réseau</h1>
+      <h1>Instances</h1>
       <p>Nom d'hôte : {{ hostname }}</p>
       <p>Adresse IP : {{ localIp }}</p>
     </div>
@@ -10,6 +10,7 @@
     import { ref, onMounted } from "vue";
     
     export default {
+      name: "Instances",
       setup() {
         const hostname = ref("");
         const localIp = ref("");
