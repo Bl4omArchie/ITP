@@ -1,12 +1,11 @@
 <template>
-    <div class="main-body">
-        <h1>Settings</h1>
-    </div>
+    <h1>Settings</h1>
 </template>
 
 <script lang="ts">
-    import "../../styles/Pages.css";
+    import "../../styles/Pages.css"
+
     export default {
-      name: 'Settings',
+        name: 'Settings',
     };
 </script>

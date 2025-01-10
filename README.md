@@ -27,6 +27,7 @@ And more to come...
 ### Modules store
 ![](images/modules.png)
 
+
 ## Tutorial
 
 1- Install Tauri prerequisites :
@@ -47,3 +48,18 @@ npm install
 ```bash
 npm run tauri dev
 ```
+
+## TODO
+
+Front-end:
+- create a rule editor with highlights, color syntax and more
+- finish the module store
+- make statistics graphic (network, number of machines...)
+- and more...
+
+Back-end:
+- make bash scripts for snort management
+- link the script with the Rust backend
+- create a database for the store and other data
+- use ssh connection for managing several machines
+- and more...

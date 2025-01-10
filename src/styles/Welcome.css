@@ -38,12 +38,12 @@
 
 @keyframes floaty {
     0% {
-        transform: translateY(0); /* Start at the original position */
+        transform: translateY(0);
     }
     50% {
-        transform: translateY(-20px); /* Move up by 20px */
+        transform: translateY(-20px);
     }
     100% {
-        transform: translateY(0); /* Return to the original position */
+        transform: translateY(0);
     }
 }
