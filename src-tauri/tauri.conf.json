@@ -13,8 +13,9 @@
     "windows": [
       {
         "title": "Snort installer",
-        "fullscreen": true,
-        "resizable": true
+        "resizable": true,
+        "width": 1800,
+        "height": 920
       }
     ],
     "security": {
