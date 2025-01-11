@@ -16,8 +16,6 @@
                 </div>
         
                 <p>{{ name }}</p>
-                <p><a :href="tool.git" target="_blank">Git</a></p>
-                <p>{{ tool.version }}</p>
             </div>
         </div>
 
@@ -47,6 +45,7 @@
         version: string;
         package_name: string;
         logo_url: string | null;
+        installed: boolean;
     }
     
     export default defineComponent({

@@ -3,105 +3,120 @@
         "git": "https://github.com/snort3/snort3.git",
         "version": "v3.6.1.0",
         "package_name": null,
-        "logo_url": "https://assets.stickpng.com/images/62c5bda26aad5aedf80e37fe.png"
+        "logo_url": "https://assets.stickpng.com/images/62c5bda26aad5aedf80e37fe.png",
+        "installed": false
     },
 
     "libdaq": {
         "git": "https://github.com/snort3/libdaq.git",
         "version": "v3.0.17",
         "package_name": null,
-        "logo_url": null
+        "logo_url": null,
+        "installed": false
     },
 
     "pulledpork3": {
         "git": "https://github.com/shirkdog/pulledpork3",
         "version": "3.0.0.5",
         "package_name": null,
-        "logo_url": null
+        "logo_url": null,
+        "installed": false
     },
 
     "hyperscan": {
         "git": "https://github.com/snort3/snort3.git",
         "version": "v3.6.1.0",
         "package_name": null,
-        "logo_url": "https://assets.stickpng.com/images/62c5bda26aad5aedf80e37fe.png"
+        "logo_url": "https://assets.stickpng.com/images/62c5bda26aad5aedf80e37fe.png",
+        "installed": false
     },
 
     "regex": {
         "git": "https://github.com/snort3/libdaq.git",
         "version": "v3.0.17",
         "package_name": null,
-        "logo_url": null
+        "logo_url": null,
+        "installed": false
     },
 
     "gperftools": {
         "git": "https://github.com/shirkdog/pulledpork3",
         "version": "3.0.0.5",
         "package_name": null,
-        "logo_url": null
+        "logo_url": null,
+        "installed": false
     },
 
     "openSSL": {
         "git": "https://github.com/snort3/snort3.git",
         "version": "v3.6.1.0",
         "package_name": null,
-        "logo_url": "https://assets.stickpng.com/images/62c5bda26aad5aedf80e37fe.png"
+        "logo_url": "https://assets.stickpng.com/images/62c5bda26aad5aedf80e37fe.png",
+        "installed": false
     },
 
     "libML": {
         "git": "https://github.com/snort3/libdaq.git",
         "version": "v3.0.17",
         "package_name": null,
-        "logo_url": null
+        "logo_url": null,
+        "installed": false
     },
 
     "sqlmap": {
         "git": "https://github.com/shirkdog/pulledpork3",
         "version": "3.0.0.5",
         "package_name": null,
-        "logo_url": null
+        "logo_url": null,
+        "installed": false
     },
 
     "snort2": {
         "git": "https://github.com/snort3/snort3.git",
         "version": "v3.6.1.0",
         "package_name": null,
-        "logo_url": "https://assets.stickpng.com/images/62c5bda26aad5aedf80e37fe.png"
+        "logo_url": "https://assets.stickpng.com/images/62c5bda26aad5aedf80e37fe.png",
+        "installed": false
     },
 
     "DPDK": {
         "git": "https://github.com/snort3/libdaq.git",
         "version": "v3.0.17",
         "package_name": null,
-        "logo_url": null
+        "logo_url": null,
+        "installed": false
     },
 
     "nmap": {
         "git": "https://github.com/shirkdog/pulledpork3",
         "version": "3.0.0.5",
         "package_name": null,
-        "logo_url": null
+        "logo_url": null,
+        "installed": false
     },
 
     "ipscan": {
         "git": "https://github.com/snort3/snort3.git",
         "version": "v3.6.1.0",
         "package_name": null,
-        "logo_url": "https://assets.stickpng.com/images/62c5bda26aad5aedf80e37fe.png"
+        "logo_url": "https://assets.stickpng.com/images/62c5bda26aad5aedf80e37fe.png",
+        "installed": false
     },
 
     "ITP": {
         "git": "https://github.com/snort3/libdaq.git",
         "version": "v3.0.17",
         "package_name": null,
-        "logo_url": null
+        "logo_url": null,
+        "installed": false
     },
 
     "metasploit": {
         "git": "https://github.com/shirkdog/pulledpork3",
         "version": "3.0.0.5",
         "package_name": null,
-        "logo_url": null
+        "logo_url": null,
+        "installed": false
     },
 
     "Xsearchbase": {

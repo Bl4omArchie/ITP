@@ -44,7 +44,7 @@ cd ITP
 npm install
 ```
 
-4- Launch the software : 
+4- Launch the software :
 ```bash
 npm run tauri dev
 ```
