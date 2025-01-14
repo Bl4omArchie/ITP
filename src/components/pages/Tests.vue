@@ -13,12 +13,13 @@
             </div>
         </div>
     </div>
+    
 </template>
 
 <script lang="ts">
     import "../../styles/boxes/snort_popup.css";
-    import "../../styles/buttons/snort_button.css";
-    import "../../styles/boxes/snort_box.css";
+    import "../../styles/buttons/SnortButton.css";
+    import "../../styles/boxes/SnortBox.css";
 
     export default {
         name: 'Tests',

@@ -1,8 +1,6 @@
 <template>
-    <div>
-      <h1>Instances</h1>
-    </div>
-  </template>
+    <h1>Instances</h1>
+</template>
   
 <script lang="ts">
     import { ref, onMounted } from "vue";

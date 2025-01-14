@@ -13,7 +13,7 @@
             </ul>
         </div>
 
-        <div class="content">
+        <div class="main-container">
             <component :is="currentPage" />
         </div>
       
@@ -30,7 +30,7 @@
     import Settings from './pages/Settings.vue';
     
     import "../styles/Menu.css";
-    import "../styles/buttons/snort_button.css";
+    import "../styles/buttons/SnortButton.css";
 
     export default {
     name: 'Menu',

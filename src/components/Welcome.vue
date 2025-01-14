@@ -14,7 +14,7 @@
   
 <script lang="ts">
     import "../styles/Welcome.css";
-    import "../styles/buttons/snort_button.css";
+    import "../styles/buttons/SnortButton.css";
     import { defineComponent } from 'vue';
     import { useRouter } from 'vue-router';
 

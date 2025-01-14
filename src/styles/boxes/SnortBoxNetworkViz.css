@@ -1,0 +1,10 @@
+.snortBox--NetworkViz {
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+}
+  
+.grid-line {
+    stroke-dasharray: 4;
+}

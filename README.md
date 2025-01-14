@@ -63,3 +63,11 @@ Back-end:
 - create a database for the store and other data
 - use ssh connection for managing several machines
 - and more...
+
+## Weekly goals 
+
+January 13 :
+- api calls from back to front (ie: network spec) (wednesday)
+- ssh connection with several machines (thursday)
+- scrap modules for the module shop (weekend)
+- comparison between simdjson and elasticSearch (weekend)
