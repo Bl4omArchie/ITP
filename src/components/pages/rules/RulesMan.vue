@@ -1,14 +1,14 @@
 <template>
     <h1>Rules</h1>
-    <div id="traffic-graph" class="snortBox snortBox--h"> </div>
+    <div class="snortBox snortBox--h"> </div>
   
-  </template>
+</template>
   
-  <script lang="ts">  
-      import "../../../styles/graphics/line_plot.css";
-      import "../../../styles/boxes/SnortBox.css";
-  
-      export default {
+<script lang="ts">  
+    import "../../../styles/graphics/line_plot.css";
+    import "../../../styles/boxes/SnortBox.css";
+
+    export default {
         name: 'Rules',
-      };
-  </script>
+    };
+</script>

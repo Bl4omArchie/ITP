@@ -8,6 +8,10 @@
     animation: scaleUp 0.3s ease-in-out;
     position: relative;
 }
+
+.snortPopup * {
+  color: #000;
+}
   
 .snortPopup-overlay {
     position: fixed;
@@ -48,10 +52,6 @@
   
 .snortPopup-content {
     text-align: center;
-}
-  
-.snortPopup * {
-    color: #000;
 }
   
 @keyframes fadeIn {

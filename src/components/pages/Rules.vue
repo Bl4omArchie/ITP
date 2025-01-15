@@ -1,6 +1,4 @@
 <template>
-    <h1>Rules</h1>
-
     <div class="snortBox snortBox--menu">
         <button @click="loadPage('RulesMan')" class="snortButton snortButton--small">Rules</button>
         <button @click="loadPage('RuleEditor')" class="snortButton snortButton--small">Editor</button>

@@ -1,8 +1,8 @@
 [package]
-name = "install-snort"
+name = "ITP"
 version = "0.1.0"
-description = "A Tauri App"
-authors = ["you"]
+description = "Install The Pork : a modern interface to manage your snort installation inside your network"
+authors = ["archie"]
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
@@ -25,9 +25,5 @@ serde = { version = "1", features = ["derive"] }
 serde_json = "1"
 tokio = { version = "1.42.0", features = ["full"] }
 tokio-postgres = "0.7"
-
-bollard = "0.18.1"
 hostname = "0.3"
 dotenv = "0.15"
-anyhow = "1.0.94"
-thiserror = "2.0.6"

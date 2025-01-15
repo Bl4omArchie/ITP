@@ -20,7 +20,15 @@
     import "../../styles/graphics/line_plot.css";
     import "../../styles/boxes/SnortBox.css";
 
+    interface ComputersWithSnort {
+        name: string;
+        ip: string;
+        os: string;
+        snort_installed: boolean;
+        snort_version: string;
+    }
+
     export default {
-      name: 'Home',
+        name: 'Home',
     };
 </script>
