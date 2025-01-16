@@ -5,9 +5,9 @@
             <img src="../assets/snort_logo.png" alt="Logo" width="200px">
             <ul>
                 <li><button @click="loadPage('Home')" class="snortButton snortButton--small">Homepage</button></li>
+                <li><button @click="loadPage('Instances')" class="snortButton snortButton--small">Instances</button></li>
                 <li><button @click="loadPage('Rules')" class="snortButton snortButton--small">Rules</button></li>
                 <li><button @click="loadPage('Modules')" class="snortButton snortButton--small">Modules</button></li>
-                <li><button @click="loadPage('Instances')" class="snortButton snortButton--small">Instances</button></li>
                 <li><button @click="loadPage('Tests')" class="snortButton snortButton--small">Tests</button></li>
                 <li><button @click="loadPage('Settings')" class="snortButton snortButton--small">Settings</button></li>
             </ul>
