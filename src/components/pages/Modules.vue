@@ -55,7 +55,7 @@
     import "../../styles/boxes/SnortBox.css";
     import "../../styles/boxes/SnortBoxStore.css";
     import "../../styles/buttons/Pagination.css";
-    import "../../styles/boxes/snort_popup.css";
+    import "../../styles/popups/SnortPopup.css";
     
     interface Tool {
         git: string;

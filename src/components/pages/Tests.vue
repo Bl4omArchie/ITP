@@ -17,7 +17,7 @@
 </template>
 
 <script lang="ts">
-    import "../../styles/boxes/snort_popup.css";
+    import "../../styles/popups/SnortPopup.css";
     import "../../styles/buttons/SnortButton.css";
     import "../../styles/boxes/SnortBox.css";
 

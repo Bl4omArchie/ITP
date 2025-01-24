@@ -1,0 +1,25 @@
+.snortPopupSsh {
+    padding: 40px;
+    width: 600px;
+    max-width: 90%;
+}
+
+.snortPopupSsh input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.drag-drop {
+    margin-bottom: 15px;
+}
+
+.drag-drop input[type="file"] {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    cursor: pointer;
+}
