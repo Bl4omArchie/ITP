@@ -51,15 +51,13 @@ npm run tauri dev
 
 ## TODO
 
-Front-end:
-- create a rule editor with highlights, color syntax and more
-- finish the module store
-- make statistics graphic (network, number of machines...)
-- and more...
+- Improve rust backend :
+SSH connection, config file for saving modules, setup...
+More data (network traffic ...)
+more bash script for snort installation
+pulledpork tool integration
 
-Back-end:
-- make bash scripts for snort management
-- link the script with the Rust backend
-- create a database for the store and other data
-- use ssh connection for managing several machines
-- and more...
+
+- Improve frontend :
+Remove TS from Vue
+Finish instances interface

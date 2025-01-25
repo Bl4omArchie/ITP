@@ -9,24 +9,13 @@
           <p>my second box </p>
       </div>
   </div>
-
 </template>
 
-<script lang="ts">
-    import { onMounted } from 'vue';
-    import * as d3 from 'd3';
 
+<script lang="ts">
     import "../network/NetworkVisualizer.vue";
     import "../../styles/graphics/line_plot.css";
     import "../../styles/boxes/SnortBox.css";
-
-    interface ComputersWithSnort {
-        name: string;
-        ip: string;
-        os: string;
-        snort_installed: boolean;
-        snort_version: string;
-    }
 
     export default {
         name: 'Home',

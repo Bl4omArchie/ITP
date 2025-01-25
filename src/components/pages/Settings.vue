@@ -18,15 +18,15 @@
     export default defineComponent({
         name: "Settings",
         setup() {
-            const machineIp = ref("");
-            const machinePort = ref(22);
+            const machineIp = ref("192.168.0.22");
+            const machinePort = ref(281);
             const publicKey = ref<File | null>(null);
-            const scriptPath = ref("/home/archie/Desktop/Code/Security/ITP/src-tauri/scripts/install_snort.sh");
-            const remotePath = ref("/home/piggy/snort_install");
+            const scriptPath = ref("/home/");
+            const remotePath = ref("/home/");
 
             const transferAndExecute = async () => {
             try {
-                const response = await invoke("transfer_and_execute", {
+                const response = await invoke("send_script_ssh", {
                     ip: machineIp.value,
                     port: machinePort.value,
                     localPath: scriptPath.value,
