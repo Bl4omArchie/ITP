@@ -1,14 +1,9 @@
 <template>
-  <div>
-      <h1>Homepage</h1>
-      <div class="snortBox snortBox--NetworkViz"> 
-          <NetworkVisualizer />
-      </div>
+    <h1>Homepage</h1>
 
-      <div class="snortBox snortBox--v">
-          <p>my second box </p>
-      </div>
-  </div>
+    <div class="snortBox snortBox--v">
+        <p>my second box </p>
+    </div>
 </template>
 
 

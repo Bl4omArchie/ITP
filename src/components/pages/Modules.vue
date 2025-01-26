@@ -1,20 +1,19 @@
 <template>
     <h1>Modules</h1>
-    
+
     <input type="text" v-model="searchQuery" placeholder="Search for a module..." class="search-bar" />
-    <button @click="refreshTools" class="snortBox__refresh-btn">Refresh Modules</button>
-      
+    <button @click="refreshPlugins" class="snortBox__refresh-btn">Refresh Modules</button>
+
     <div class="snortBox">
         <h2>Module store</h2>
         <div class="snorBox snortBox--store">
             <div 
-                v-for="(tool, name) in paginatedTools"
+                v-for="(plugin, name) in paginatedPlugins"
                 :key="name"
                 class="snortBox--store-i"
-                @click="selectTool(tool)">
-                
+                @click="selectPlugin(plugin)">
                 <div class="snortBox__logo">
-                    <img :src="tool.logo_url || defaultLogo" :alt="`${name} logo`" class="snortBox__logo-img" />
+                    <img :src="plugin.logo_url || defaultLogo" :alt="`${name} logo`" class="snortBox__logo-img" />
                 </div>
                 <p>{{ name }}</p>
             </div>
@@ -24,10 +23,10 @@
             <div class="snortPopup">
                 <div class="snortPopup-close" @click="closePopup">×</div>
                 <div class="snortPopup-content">
-                    <h2>{{ selectedTool?.package_name }}</h2>
-                    <img :src="selectedTool?.logo_url || defaultLogo" alt="Logo" width="100" />
-                    <p><strong>Git:</strong> <a :href="selectedTool?.git" target="_blank">{{ selectedTool?.git }}</a></p>
-                    <p><strong>Version:</strong> {{ selectedTool?.version }}</p>
+                    <h2>{{ selectedPlugin?.package_name }}</h2>
+                    <img :src="selectedPlugin?.logo_url || defaultLogo" alt="Logo" width="100" />
+                    <p><strong>Git:</strong> <a :href="selectedPlugin?.git" target="_blank">{{ selectedPlugin?.git }}</a></p>
+                    <p><strong>Version:</strong> {{ selectedPlugin?.version }}</p>
                 </div>
             </div>
         </div>
@@ -36,9 +35,7 @@
             <button @click="prevPage" :disabled="currentPage === 1" class="pagination-btn">
                 <i class="fas fa-chevron-left"></i>
             </button>
-
             Page {{ currentPage }} of {{ totalPages }}
-
             <button @click="nextPage" :disabled="currentPage === totalPages" class="pagination-btn">
                 <i class="fas fa-chevron-right"></i>
             </button>
@@ -49,7 +46,7 @@
 <script lang="ts">
     import { defineComponent, ref, computed, onMounted } from "vue";
     import { usePagination } from "../../services/Pagination";
-    import { useModules, Module } from "../../services/Modules";
+    import { usePluginSystem } from "../../services/Plugin";
 
     import "../../styles/boxes/SnortBox.css";
     import "../../styles/boxes/SnortBoxStore.css";
@@ -59,55 +56,51 @@
     export default defineComponent({
         name: "Modules",
         setup() {
-            const { modules, loadModules, refreshModules } = useModules();
-            const defaultLogo = "https://vectorified.com/images/default-icon-16.png";
+            const {
+                plugins,
+                defaultLogo,
+                loadPlugins,
+                refreshPlugins,
+                filteredPlugins,
+                searchQuery,
+            } = usePluginSystem();
 
-            const searchQuery = ref("");
-            const selectedModule = ref<Module | null>(null);
+            const {
+                paginatedItems: paginatedPlugins,
+                currentPage,
+                totalPages,
+                nextPage,
+                prevPage,
+            } = usePagination(filteredPlugins, 12);
 
-            onMounted(async () => {
-                await loadModules();
-            });
+            const selectedPlugin = ref<any | null>(null);
+            const showPopup = ref(false);
 
-            // Filter tools based on search
-            const filteredModules = computed(() => {
-                if (!searchQuery.value) return modules.value;
-                const query = searchQuery.value.toLowerCase();
-                return Object.fromEntries(
-                    Object.entries(modules.value).filter(([name]) =>
-                        name.toLowerCase().includes(query)
-                    )
-                );
-            });
+            const closePopup = () => {
+                showPopup.value = false;
+            };
 
-            const { paginatedItems, totalPages, currentPage, nextPage, prevPage } = usePagination(modules, 12);
+            const selectPlugin = (plugin: any) => {
+                selectedPlugin.value = plugin;
+                showPopup.value = true;
+            };
+
+            onMounted(loadPlugins);
 
             return {
-                modules,
-                defaultLogo,
                 searchQuery,
                 currentPage,
                 totalPages,
-                paginatedItems,
+                paginatedPlugins,
                 nextPage,
                 prevPage,
-                refreshModules,
-                selectedModule,
+                refreshPlugins,
+                showPopup,
+                closePopup,
+                selectPlugin,
+                selectedPlugin,
+                defaultLogo,
             };
-        },
-        data() {
-            return {
-                showPopup: false,
-            };
-        },
-        methods: {
-            closePopup() {
-                this.showPopup = false;
-            },
-            selectModule(module: Module) {
-                this.selectedModule = module;
-                this.showPopup = true;
-            }
         },
     });
 </script>

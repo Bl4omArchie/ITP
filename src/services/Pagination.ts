@@ -1,16 +1,14 @@
-import { ref, computed, Ref } from "vue";
+import { computed, ref } from "vue";
 
-export function usePagination(filteredTools: Ref<Record<string, any>>, itemsPerPage: number) {
+export function usePagination(items: any, itemsPerPage: number) {
     const currentPage = ref(1);
 
-    const totalPages = computed(() =>
-        Math.ceil(Object.keys(filteredTools.value).length / itemsPerPage)
-    );
+    const totalPages = computed(() => Math.ceil(Object.keys(items.value).length / itemsPerPage));
 
-    const paginatedTools = computed(() => {
+    const paginatedItems = computed(() => {
         const start = (currentPage.value - 1) * itemsPerPage;
         const end = start + itemsPerPage;
-        return Object.entries(filteredTools.value)
+        return Object.entries(items.value)
             .slice(start, end)
             .reduce((acc, [key, val]) => ({ ...acc, [key]: val }), {});
     });
@@ -24,9 +22,9 @@ export function usePagination(filteredTools: Ref<Record<string, any>>, itemsPerP
     };
 
     return {
-        paginatedTools,
-        totalPages,
         currentPage,
+        totalPages,
+        paginatedItems,
         nextPage,
         prevPage,
     };

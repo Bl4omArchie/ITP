@@ -30,6 +30,7 @@
     import Settings from './pages/Settings.vue';
     
     import "../styles/Menu.css";
+    import "../styles/Pages.css"
     import "../styles/buttons/SnortButton.css";
 
     export default {

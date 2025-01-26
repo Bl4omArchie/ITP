@@ -5,14 +5,14 @@
             <p>{{ item.name }}</p>
         </div>
 
-        <div class="snortBox--instances-actions ">
-            <button @click="selectedItem = true" class="action-btn settings-btn">
+        <div class="snortBox--instances-actions">
+            <button @click="selectedItem = item" class="action-btn settings-btn">
                 <i class="fas fa-cog"></i>
             </button>
-            <button @click="selectedItem = true" class="action-btn warning-btn">
+            <button @click="selectedItem = item" class="action-btn warning-btn">
                 <i class="fas fa-exclamation-circle"></i>
             </button>
-            <button @click="selectedItem = true" class="action-btn repair-btn">
+            <button @click="selectedItem = item" class="action-btn repair-btn">
                 <i class="fas fa-hammer"></i>
             </button>
         </div>
@@ -58,9 +58,7 @@
         <button @click="prevPage" :disabled="currentPage === 1" class="pagination-btn">
             <i class="fas fa-chevron-left"></i>
         </button>
-
         Page {{ currentPage }} of {{ totalPages }}
-
         <button @click="nextPage" :disabled="currentPage === totalPages" class="pagination-btn">
             <i class="fas fa-chevron-right"></i>
         </button>
@@ -68,7 +66,9 @@
 </template>
 
 <script lang="ts">
-    import { defineComponent, ref, computed } from "vue";
+    import { defineComponent, ref } from "vue";
+    import { usePagination } from "../../services/Pagination";
+
     import "../../styles/boxes/SnortBox.css";
     import "../../styles/boxes/SnortBoxInstances.css";
     import "../../styles/buttons/Pagination.css";
@@ -76,39 +76,20 @@
     import "../../styles/popups/SnortPopup.css";
     import "../../styles/popups/SnortPopup_ssh.css";
 
-    interface Item {
-        name: string;
-    }
+    
 
     export default defineComponent({
         name: "Instances",
         setup() {
-            const items = ref<Item[]>([]);
-            const currentPage = ref(1);
-            const itemsPerPage = 3;
+            const items = ref<{ name: string }[]>([]);
+            const { paginatedItems, currentPage, totalPages, nextPage, prevPage } = usePagination(items, 3);
+
             const machineIp = ref("");
             const machinePort = ref(22); // Default SSH port
             const newBoxName = ref("");
-            const selectedItem = ref<Item | null>(null);
+            const selectedItem = ref<{ name: string } | null>(null);
             const showAddPopup = ref(false);
             const publicKey = ref<File | null>(null);
-
-            const paginatedItems = computed(() => {
-                const start = (currentPage.value - 1) * itemsPerPage;
-                return items.value.slice(start, start + itemsPerPage);
-            });
-
-            const totalPages = computed(() =>
-                Math.ceil(items.value.length / itemsPerPage)
-            );
-
-            const nextPage = () => {
-                if (currentPage.value < totalPages.value) currentPage.value++;
-            };
-
-            const prevPage = () => {
-                if (currentPage.value > 1) currentPage.value--;
-            };
 
             const closePopup = () => {
                 showAddPopup.value = false;
@@ -131,9 +112,9 @@
 
             return {
                 items,
+                paginatedItems,
                 currentPage,
                 totalPages,
-                paginatedItems,
                 nextPage,
                 prevPage,
                 showAddPopup,
@@ -151,8 +132,8 @@
 </script>
 
 <style scoped>
-.plus-icon {
-    font-size: 32px;
-    font-weight: bold;
-}
+    .plus-icon {
+        font-size: 32px;
+        font-weight: bold;
+    }
 </style>
