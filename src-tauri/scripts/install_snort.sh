@@ -15,6 +15,9 @@
 #   ./install_snort.sh 4
 
 
+source install.sh
+
+
 snort_required_packages=('cmake'            #snort requirements
                         'libdaq-dev' 
                         'libdnet-dev' 
@@ -37,17 +40,8 @@ set_default_env_var() {
     export git_libdaq="${git_installation}/libdaq"
 }
 
-install_depedencies() {
-    for package in "${snort_required_packages[@]}"; do
-        if ! dpkg -s "${package}" >/dev/null 2>&1; then
-            sudo apt install "${package}" -y -qq
-        fi
-    done
-    echo -e "${GREEN}[✔] Dependencies installed!${NC}"
-}
-
 install_snort() {
-    if ! git clone -q https://github.com/snort3/snort3.git "${git_snort}"; then
+    if ! git clone -q https://github.com/snort3/snort3.git; then
         echo -e "${RED}[✘] Error: couldn't get Snort3 repository${NC}"
         exit 1
     fi
@@ -63,7 +57,7 @@ install_snort() {
 }
 
 install_libdaq() {
-    if ! git clone -q https://github.com/snort3/libdaq.git "${git_libdaq}"; then
+    if ! git clone -q https://github.com/snort3/libdaq.git; then
         echo -e "${RED}[✘] Error: couldn't get libdaq repository${NC}"
         exit 1
     fi
@@ -71,22 +65,24 @@ install_libdaq() {
 
     ./bootstrap &> /dev/null
     ./configure --prefix="${libdaq_path}" &> /dev/null
+
+    make -j "${1}" &> /dev/null
     sudo make install &> /dev/null
     sudo ldconfig
 
     echo -e "${GREEN}[✔] Libdaq installed!${NC}"
 }
 
-
-start_snort_installation() {    
-    install_depedencies
+start_snort_installation() {
+    install_dependencies ${snort_required_packages[@]}
     set_default_env_var
 
-    mkdir -p "${git_installation}" && cd "${git_installation}"
-    install_libdaq "${1}"
+    mkdir -p "${git_installation}" && cd "${git_installation}" || exit 1
+    install_libdaq ${1}
 
-    cd "${git_installation}"
-    install_snort "${1}"
+    cd "${git_installation}" || exit 1
+    install_snort ${1}
+    export PATH=${snort_path}:${PATH}
     snort -V
 }
 
@@ -104,5 +100,6 @@ parameters_checking() {
     fi
 }
 
+select_package_manager
 parameters_checking "$@"
 start_snort_installation "$@"

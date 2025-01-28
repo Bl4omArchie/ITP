@@ -40,4 +40,4 @@ check_git_libdaq() {
         echo "Couldn't find git libdaq"
         exit 1
     fi
-} 
+}
