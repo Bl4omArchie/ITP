@@ -10,7 +10,7 @@
 # Parameters :   
 #
 # Exemple :
-#   ./install_dpdk.sh
+#   ./install_dpdk.sh   
 
 
 source install.sh
@@ -25,8 +25,7 @@ dpdk_depedencies=('build-essential'      #dpdk requirements
 
 
 set_default_env_var() {
-    export $git_installation=${HOME}
-    export $git_dpdk="${git_installation}/dpdk"
+    export git_dpdk="${HOME}/dpdk"
 }
 
 
@@ -46,7 +45,7 @@ install_dpdk() {
 
 
 start_dpdk_installation() {    
-    install_dependencies ${dpdk_depedencies[@]}
+    install_packages ${dpdk_depedencies[@]}
     set_default_env_var
 
     mkdir -p "${git_installation}" && cd "${git_installation}" || exit 1

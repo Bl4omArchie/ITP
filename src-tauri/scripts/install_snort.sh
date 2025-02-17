@@ -74,7 +74,7 @@ install_libdaq() {
 }
 
 start_snort_installation() {
-    install_dependencies ${snort_required_packages[@]}
+    install_packages ${snort_required_packages[@]}
     set_default_env_var
 
     mkdir -p "${git_installation}" && cd "${git_installation}" || exit 1
@@ -82,7 +82,10 @@ start_snort_installation() {
 
     cd "${git_installation}" || exit 1
     install_snort ${1}
-    export PATH=${snort_path}:${PATH}
+    
+    export PATH=${libdaq_path}/bin:${PATH} >> ~/.bashrc
+    export PATH=${snort_path}/bin:${PATH} >> ~/.bashrc
+    source ~/.bashrc
     snort -V
 }
 

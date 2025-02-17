@@ -1,9 +1,7 @@
 #!/bin/bash
 
-
 PKG_MANAGER="NULL"
 INSTALL_CMD="NULL"
-
 
 select_package_manager() {
     if [ -f /etc/os-release ]; then
@@ -33,11 +31,16 @@ select_package_manager() {
 }
 
 
-install_dependencies() {
+install_packages() {
     for package in "${@}"; do
         if ! dpkg -s "${package}" >/dev/null 2>&1; then
-            $INSTALL_CMD "${package}" -y -qq
+            $INSTALL_CMD "${package}" -qq
         fi
     done
     echo -e "${GREEN}[✔] Dependencies installed!${NC}"
+}
+
+
+snort_already_installed() {
+    snort -V || echo "Snort does not seem to be installed" exit 1
 }

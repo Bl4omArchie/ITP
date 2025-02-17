@@ -10,34 +10,13 @@
 # Should I add more security like include/ checking, config checking...
 
 
-check_snort() {
-    if [ -z "${snort_path}" ]; then
-        echo "Couldn't find Snort3 environment variable"
-        exit 1
-    elif [ ! -d "${snort_path}" ]; then
-        echo "Snort folder is empty"
-        exit 1
-    echo 
-    fi
+SNORT_NAME="snort"
+LIBDAQ_NAME="daqtest"
+
+check_snort_path() {
+    which ${SNORT_NAME} || echo "Coudln't find snort in PATH"
 }
 
-check_libdaq() {
-    if [ -z "${libdaq_path}" ]; then 
-        echo "Couldn't find libdaq"
-        exit 1
-    fi
-}
-
-check_git_snort() {
-    if [ -z "${git_snort}" ]; then 
-        echo "Couldn't find git Snort3"
-        exit 1
-    fi
-}
-
-check_git_libdaq() {
-    if [ -z "${git_libdaq}" ]; then 
-        echo "Couldn't find git libdaq"
-        exit 1
-    fi
+check_libdaq_path() {
+    which ${LIBDAQ_NAME} || echo "Coudln't find libdaq in PATH"
 }
