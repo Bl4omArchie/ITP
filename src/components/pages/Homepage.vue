@@ -8,7 +8,6 @@
 
 
 <script lang="ts">
-    import "../network/NetworkVisualizer.vue";
     import "../../styles/graphics/line_plot.css";
     import "../../styles/boxes/SnortBox.css";
 

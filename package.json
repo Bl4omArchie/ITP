@@ -16,20 +16,27 @@
     "@codemirror/view": "^6.36.2",
     "@fortawesome/fontawesome-free": "^6.7.2",
     "@lezer/highlight": "^1.2.1",
-    "@tauri-apps/api": "^2.2.0",
+    "@monaco-editor/loader": "^1.5.0",
+    "@tauri-apps/api": "^2.5.0",
+    "@tauri-apps/plugin-dialog": "^2.2.2",
+    "@tauri-apps/plugin-fs": "^2.3.0",
     "@tauri-apps/plugin-opener": "^2",
     "axios": "^1.7.9",
     "codemirror": "^6.0.1",
     "d3": "^7.9.0",
+    "monaco-editor": "^0.52.2",
+    "monaco-editor-vue3": "^0.1.10",
     "vue": "^3.5.13",
+    "vue-monaco": "^1.2.2",
     "vue-router": "^4.5.0"
   },
   "devDependencies": {
-    "@tauri-apps/cli": "^2",
+    "@tauri-apps/cli": "^2.5.0",
     "@types/d3": "^7.4.3",
     "@vitejs/plugin-vue": "^5.2.1",
     "typescript": "~5.6.2",
     "vite": "^6.0.3",
+    "vite-plugin-monaco-editor": "^1.1.0",
     "vue-tsc": "^2.1.10"
   }
 }
