@@ -1,25 +1,13 @@
 # [ITP] Install The Pork
 
 This modern interface in Vuejs allows you to manage your snort installation. 
-
-Features :
-- Install, update and remove snort from one or several machine or with several instances in one machine.
-- Statistics for an optimal snort usage
-- PulledPork3 for rules management
-- Rule editor and groups of rules
-- Module store
-- Stress test
-
-And more to come...
+The v0 is a prototype so there is no actual features. I'm right now, developping ideas such rule editor with syntaxic highlight, automatic installation on one or several machines and more.
 
 
 ## Sneak peak
 
 ### Menu
 ![](images/menu.png)
-
-### Homepage
-![](images/homepage.png)
 
 ### Rules editor
 ![](images/rules.png)
@@ -51,13 +39,7 @@ npm run tauri dev
 
 ## TODO
 
-- Improve rust backend :
-SSH connection, config file for saving modules, setup...
-More data (network traffic ...)
-more bash script for snort installation
-pulledpork tool integration
-
-
-- Improve frontend :
-Remove TS from Vue
-Finish instances interface
+- Finish rule editor : issue with monaco
+- Make the homepage where you can install snort automatically
+- Make the rule manage with PulledPork3
+- Find more community tools on Snort to integrate
